@@ -3,23 +3,19 @@
 
 std::vector<unsigned int> fib_below_n( unsigned int n )
 {
-    // TODO: adicione o seu código aqui.
-    
+    /* vector<unsigned int> vazio = {}; */
+    if( n <= 1 )
+        return {};
 
-    // meu array
-    vector<unsigned int> valores;
-    for(int i=0; i < n; i++){
-        if(i == 0 || i == 1)
-            valores.push_back({ 1 });
-        else
-            valores.push_back({ (valores[i-1] + valores[i-2]) });
+    vector<unsigned int> valores = { 1, 1 };
+
+    for(int i=2; i < n; i++){
+        unsigned int valor_atual =  (valores[i-1] + valores[i-2]);
+        if( valor_atual >= n ){
+            break;
+        }
+        valores.push_back({ valor_atual });
     }
-    /* meus_n.push_back({ 3 }); */
-    /* meus_n.size(); */
 
-
-    /* return std::vector<unsigned int>{}; */
     return valores;
-    // TODO: Isto é apenas um STUB. Troque o retorno pelo que você julgar correto.
-    /* return std::vector<unsigned int>{}; */
 }
