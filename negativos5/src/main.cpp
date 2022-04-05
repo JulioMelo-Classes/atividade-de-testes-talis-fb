@@ -7,7 +7,6 @@ const int SIZE = 5; // input size.
 
 int main(void)
 {
-    // TODO: Adicione aqui seu código.
     int valores[5];
 
     cin>>valores[0];
